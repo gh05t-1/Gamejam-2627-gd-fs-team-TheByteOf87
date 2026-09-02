@@ -39,7 +39,6 @@ public class GameStates : MonoBehaviour
             case GameState.Fishing:
                 if (!p1.didStart)
                 {
-                    p1.
                 }
             break;
             case GameState.Boating:
