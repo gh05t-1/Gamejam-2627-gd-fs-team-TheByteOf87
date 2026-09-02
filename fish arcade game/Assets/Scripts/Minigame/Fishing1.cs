@@ -2,17 +2,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Fishing : MonoBehaviour
+public class Fishing1 : MonoBehaviour
 {
     [SerializeField] Slider fishSlider;
-    [SerializeField] float reelSpeed;
+    [SerializeField] float reelSpeed = 50;
     InputAction interactAction;
     InputAction fishAction;
 
     void Start()
     {
-        interactAction = InputSystem.actions.FindAction("Interact");
-        fishAction = InputSystem.actions.FindAction("Fish");
+        interactAction = InputSystem.actions.FindAction("Interact1");
+        fishAction = InputSystem.actions.FindAction("Fish1");
     }
 
     void Update()
