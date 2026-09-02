@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb02a7fe0a0924e4385859a2d94a0262, type: 3}
+  m_Name: Walking Fish
+  m_EditorClassIdentifier: Assembly-CSharp::Fish
+  fishLenght: 10
+  points: 1000
+  fishName: Walking fish
+  icon: {fileID: 3552083042691689913, guid: 39b8db0439463634a971bfd166c607e0, type: 3}
