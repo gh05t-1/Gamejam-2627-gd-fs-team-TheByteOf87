@@ -1,33 +1,50 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
+
+public enum GameState
+{
+    Fishing,
+    Boating
+};
 
 public class GameStates : MonoBehaviour
 {
 
-
-   /* private GameStates currentState;
-    private J
-
-    public enum GameStates
-    {
-        Fishing,
-        Boating
-    }
+    private GameState currentState;
+    private Fishing1 p1;
+    private Fishing2 p2;
 
     private void Start()
     {
-        FishingMiniGame = GetComponent<>();
+        Debug.Log("working");
     }
-    void update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.G)){
-            if (currentState == GameStates.Fishing)
+            Debug.Log("switching state");
+
+            if (currentState == GameState.Fishing)
             {
-                currentState = GameStates.Boating;
+                currentState = GameState.Boating;
+
+
             }
         }
         else
         {
-            currentState = GameStates.Fishing;
+            currentState = GameState.Fishing;
         }
-    }*/
+        switch (currentState)
+        {
+            case GameState.Fishing:
+                if (!p1.didStart)
+                {
+                    p1.
+                }
+            break;
+            case GameState.Boating:
+            break;
+        }
+    }
+
 }
