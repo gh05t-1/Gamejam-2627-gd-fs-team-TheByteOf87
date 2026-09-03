@@ -53,13 +53,13 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _specularDensity: 5
+    - _specularDensity: 2000
     - _specularSpd: 1.08
     - _specularThickness: 2
     - _waterDepth: 0.5
-    - _waveAmp: 0.25
-    - _waveFreq: 0.25
-    - _waveSpd: 1
+    - _waveAmp: 0
+    - _waveFreq: 0
+    - _waveSpd: 0
     m_Colors:
     - _deepColor: {r: 0, g: 0.3772645, b: 1, a: 1}
     - _shallowColor: {r: 0, g: 0.9459443, b: 1, a: 1}
