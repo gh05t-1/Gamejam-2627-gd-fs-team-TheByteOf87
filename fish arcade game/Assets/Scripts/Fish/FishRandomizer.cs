@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class FishRandomizer : MonoBehaviour
 {
     //private Fish fish;
@@ -17,18 +18,14 @@ public class FishRandomizer : MonoBehaviour
     {
         FishIcon.enabled = false;
     }
-    private void Update()
-    {
- 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            chosenFish = fishList[Random.Range(0, fishList.Count)];
-            FishIcon.enabled = true;
-            FishIcon.sprite = chosenFish.icon;
-            fishStats.text = "Fish; " + chosenFish.fishName + " Length: " + chosenFish.fishLenght + " Points " + chosenFish.points;
-        }
-        
-        
-    }
 
+    public Fish GetRandomFish()
+    {
+        chosenFish = fishList[Random.Range(0, fishList.Count)];
+        FishIcon.enabled = true;
+        FishIcon.sprite = chosenFish.icon;
+        fishStats.text = "Fish; " + chosenFish.fishName + " Length: " + chosenFish.fishLenght + " Points " + chosenFish.points;
+
+        return chosenFish;
+    }
 }
