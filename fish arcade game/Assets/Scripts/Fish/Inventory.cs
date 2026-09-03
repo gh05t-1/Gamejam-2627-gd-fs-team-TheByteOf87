@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     public static UnityAction<Fish> collectFishActionP2;
     [SerializeField] private Fish fih;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         collectFishActionP1 += CollectFishP1;
         collectFishActionP2 += CollectFishP2;
