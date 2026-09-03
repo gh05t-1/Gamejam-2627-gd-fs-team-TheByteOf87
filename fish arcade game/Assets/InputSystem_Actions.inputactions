@@ -37,6 +37,16 @@
                     "priority": 0
                 },
                 {
+                    "name": "Interact2",
+                    "type": "Button",
+                    "id": "28824197-6e60-4e0b-846a-e348d4813a15",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
                     "name": "Fish1",
                     "type": "Value",
                     "id": "270e089d-7454-46db-be8a-cfeca7996d34",
@@ -161,11 +171,22 @@
                 {
                     "name": "",
                     "id": "3b092ea2-6f3b-4ade-ac7b-9bcabf4317ec",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interact1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1130ab2-758f-485f-ab89-7b3f79540350",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

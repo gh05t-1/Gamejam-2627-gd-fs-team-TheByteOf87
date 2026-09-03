@@ -21,7 +21,7 @@ public class BoatP2Movement : MonoBehaviour
     void Start()
     {
         toggleMovementP2 += ToggleMv;
-        toggleMovementP2.Invoke(true);
+        toggleMovementP2.Invoke(false);
         rb = GetComponent<Rigidbody>();
     }
 
