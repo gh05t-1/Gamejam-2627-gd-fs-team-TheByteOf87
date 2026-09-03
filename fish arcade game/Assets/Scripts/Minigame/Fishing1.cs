@@ -13,7 +13,6 @@ public class Fishing1 : MonoBehaviour
     private void Awake()
     {
         Catch.StartFishing += StartFishing;
-        Catch.StopFishing += StopFishing;
     }
 
     void Start()
