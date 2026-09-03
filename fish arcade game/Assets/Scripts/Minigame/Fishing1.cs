@@ -8,6 +8,12 @@ public class Fishing1 : MonoBehaviour
     [SerializeField] float reelSpeed = 50;
     InputAction interactAction;
     InputAction fishAction;
+    bool stopFishing = true;
+
+    private void Awake()
+    {
+        Catch.StartFishing += StartFishing;
+    }
 
     void Start()
     {
@@ -17,6 +23,8 @@ public class Fishing1 : MonoBehaviour
 
     void Update()
     {
+        if (stopFishing) return;
+
         var fishValue = fishAction.ReadValue<float>();
 
         switch (fishValue)
@@ -29,5 +37,17 @@ public class Fishing1 : MonoBehaviour
                 fishSlider.value -= reelSpeed * Time.deltaTime;
                 break;
         }
+    }
+
+    void StartFishing(bool isPlayer1)
+    {
+        if (!isPlayer1) return;
+        stopFishing = false;
+    }
+
+    void StopFishing(bool isPlayer1)
+    {
+        if (!isPlayer1) return;
+        stopFishing = true;
     }
 }
