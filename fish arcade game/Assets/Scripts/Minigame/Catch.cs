@@ -58,6 +58,7 @@ public class Catch : MonoBehaviour
     {
         fishingSlider.gameObject.SetActive(true);
         targetSlider.gameObject.SetActive(true);
+        fishHealth = 3f;
         stopFishing = false;
     }
 
@@ -71,6 +72,14 @@ public class Catch : MonoBehaviour
         fishingSlider.gameObject.SetActive(false);
         targetSlider.gameObject.SetActive(false);
         stopFishing = true;
+
+     ///  This changes the game states to Boating for BOTH players. 
+        GameStates._FishingP1 = false;
+        GameStates._FishingP2 = false;
+
+        GameStates.ChangeStateP1();
+        GameStates.ChangeStateP1();
+    ///
     }
 
     IEnumerator MoveRandomizer()

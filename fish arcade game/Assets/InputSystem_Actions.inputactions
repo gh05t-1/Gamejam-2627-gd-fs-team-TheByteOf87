@@ -7,7 +7,7 @@
             "id": "94e42e7b-72f6-45ef-9f3a-9caf0c1a27fc",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoveP1",
                     "type": "Value",
                     "id": "1420a50b-cd44-4fc8-bc64-6edd74e84256",
                     "expectedControlType": "Vector2",
@@ -45,7 +45,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveP1",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -56,7 +56,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -67,7 +67,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -78,7 +78,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -89,7 +89,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP1",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -144,7 +144,7 @@
             "id": "7e722e27-9f4a-4b95-926b-96b6ea24c180",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoveP2",
                     "type": "Value",
                     "id": "6b62d09a-f588-4ab8-92e5-851a94bf4b92",
                     "expectedControlType": "Vector2",
@@ -182,7 +182,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveP2",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -193,7 +193,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -204,7 +204,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -215,7 +215,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -226,7 +226,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveP2",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
