@@ -15,4 +15,4 @@ MonoBehaviour:
   fishLenght: 10
   points: 1000
   fishName: Walking fish
-  icon: {fileID: 3552083042691689913, guid: 39b8db0439463634a971bfd166c607e0, type: 3}
+  icon: {fileID: 5269658277230468567, guid: 86acc14992163d442893bc926bbdde56, type: 3}
