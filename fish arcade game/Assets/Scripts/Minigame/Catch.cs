@@ -62,6 +62,8 @@ public class Catch : MonoBehaviour
 
     private void FishFish(bool player)
     {
+        if (player != isPlayer1) return;
+
         fishingSlider.gameObject.SetActive(true);
         targetSlider.gameObject.SetActive(true);
         fishHealth = 3f;
@@ -73,10 +75,12 @@ public class Catch : MonoBehaviour
         if (isPlayer1)
         {
             Inventory.collectFishActionP1.Invoke(GetRandomFish());
+            GameStates.ChangeStateP1();
         }
         else
         {
-            Inventory.collectFishActionP1.Invoke(GetRandomFish());
+            Inventory.collectFishActionP2.Invoke(GetRandomFish());
+            GameStates.ChangeStateP2();
         }
 
 
@@ -87,14 +91,6 @@ public class Catch : MonoBehaviour
         fishingSlider.gameObject.SetActive(false);
         targetSlider.gameObject.SetActive(false);
         stopFishing = true;
-
-     ///  This changes the game states to Boating for BOTH players. 
-        GameStates._FishingP1 = false;
-        GameStates._FishingP2 = false;
-
-        GameStates.ChangeStateP1();
-        GameStates.ChangeStateP1();
-    ///
     }
 
     IEnumerator MoveRandomizer()

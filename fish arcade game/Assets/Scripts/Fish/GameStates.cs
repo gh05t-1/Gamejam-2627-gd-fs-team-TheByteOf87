@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 
 public enum GameState
@@ -23,6 +24,7 @@ public class GameStates : MonoBehaviour
 
     private void Start()
     {
+
         Debug.Log("working");
 
         _FishingP1 = false;
@@ -33,7 +35,7 @@ public class GameStates : MonoBehaviour
         /// PLAYER 1
 
         ///BOATING & FISHING
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             ChangeStateP1();
         }
@@ -41,7 +43,7 @@ public class GameStates : MonoBehaviour
         /// PLAYER 2
 
         ///BOATING & FISHING
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             ChangeStateP2();
         }

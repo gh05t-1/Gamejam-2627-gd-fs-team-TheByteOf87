@@ -37,7 +37,33 @@ public class BoatP2Movement : MonoBehaviour
     {
         if (canMove)
         {
-            Vector3 mv = new Vector3(InputSystem.actions["MoveP2"].ReadValue<Vector2>().x, 0, InputSystem.actions["MoveP2"].ReadValue<Vector2>().y);
+            float hor;
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                hor = -1;
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                hor = 1;
+            }
+            else
+            {
+                hor = 0;
+            }
+            float vert;
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                vert = -1;
+            }
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                vert = 1;
+            }
+            else
+            {
+                vert = 0;
+            }
+            Vector3 mv = new Vector3(hor, 0, vert);
             boatAngleTarg = mv.x * rotAmount;
             boatTiltXTarg = mv.z * boatTiltXAmount;
             boatAngle = Mathf.LerpAngle(boatAngle, boatAngleTarg, rotSpeed);
