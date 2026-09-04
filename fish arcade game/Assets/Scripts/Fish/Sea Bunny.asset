@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb02a7fe0a0924e4385859a2d94a0262, type: 3}
-  m_Name: Goldfish
+  m_Name: Sea Bunny
   m_EditorClassIdentifier: Assembly-CSharp::Fish
-  fishLenght: 12
+  fishLenght: 2
   points: 500
-  fishName: Goldfish
-  icon: {fileID: 2866502940677049033, guid: 8cfc096cdf4ce254eb27d4c44c6fe14a, type: 3}
+  fishName: Sea Bunny
+  icon: {fileID: -4933647737565827462, guid: 49f16cfbdeebc2f48bcdfc3eb8ad712e, type: 3}
