@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -15,10 +17,13 @@ public class Catch : MonoBehaviour
     [SerializeField] int target;
     [SerializeField] bool isPlayer1;
     [SerializeField] float fishHealth = 3f;
-    [SerializeField] FishRandomizer fishRandomizer;
     float[] catchSizes = {25, 20, 16, 12, 8};
     float moveSpeed;
     bool stopFishing = true;
+    [SerializeField] private Image FishIcon;
+    [SerializeField] private TextMeshProUGUI fishStats;
+    public List<Fish> fishList = new List<Fish>();
+    private Fish chosenFish;
 
     private void Awake()
     {
@@ -27,6 +32,7 @@ public class Catch : MonoBehaviour
 
     private void Start()
     {
+        FishIcon.enabled = false;
         targetSlider.value = Random.Range(targetSlider.minValue + catchSizes[target] / 2, targetSlider.maxValue - catchSizes[target] / 2);
         
         targetImage.texture = targetImages[target];
@@ -64,9 +70,18 @@ public class Catch : MonoBehaviour
     private void CatchFish()
     {
         if (isPlayer1)
-            Inventory.collectFishActionP1.Invoke(fishRandomizer.GetRandomFish());
+        {
+            Inventory.collectFishActionP1.Invoke(GetRandomFish());
+        }
         else
-            Inventory.collectFishActionP2.Invoke(fishRandomizer.GetRandomFish());
+        {
+            Inventory.collectFishActionP1.Invoke(GetRandomFish());
+        }
+
+
+        FishIcon.enabled = true;
+        FishIcon.sprite = chosenFish.icon;
+        fishStats.text = "Fish; " + chosenFish.fishName + " Length: " + chosenFish.fishLenght + " Points " + chosenFish.points;
 
         fishingSlider.gameObject.SetActive(false);
         targetSlider.gameObject.SetActive(false);
@@ -84,5 +99,17 @@ public class Catch : MonoBehaviour
 
             yield return new WaitForSeconds(Random.Range(targetSwitchTiming.x, targetSwitchTiming.y));
         }
+    }
+
+
+
+
+
+
+
+    public Fish GetRandomFish()
+    {
+        chosenFish = fishList[Random.Range(0, fishList.Count)];
+        return chosenFish;
     }
 }
