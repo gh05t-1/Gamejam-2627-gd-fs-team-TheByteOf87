@@ -19,6 +19,8 @@ public class StartAndTimer : MonoBehaviour
     [SerializeField] private Transform boatStart2;
     [SerializeField] private Transform boat1;
     [SerializeField] private Transform boat2;
+    [SerializeField] private AudioSource startSfx;
+    [SerializeField] private AudioSource endSfx;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +59,7 @@ public class StartAndTimer : MonoBehaviour
         boat1.rotation = boatStart1.rotation;
         boat2.position = boatStart2.position;
         boat2.rotation = boatStart2.rotation;
+        startSfx.Play();
     }
 
     private void DeductTime()
@@ -89,6 +92,7 @@ public class StartAndTimer : MonoBehaviour
             winner.text = "TIE!";
         }
         Invoke("ResetEnd", 10);
+        endSfx.Play();
     }
 
     private void ResetEnd()

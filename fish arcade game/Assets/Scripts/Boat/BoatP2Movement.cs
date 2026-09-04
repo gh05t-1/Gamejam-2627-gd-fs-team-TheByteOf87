@@ -17,6 +17,8 @@ public class BoatP2Movement : MonoBehaviour
     private float boatTiltX;
     private float boatAngle;
     [SerializeField] private ParticleSystem engineParticles;
+    [SerializeField] private AudioSource motorSound;
+    private bool hasPlayedSound = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,15 +49,30 @@ public class BoatP2Movement : MonoBehaviour
             if (mv.z > 0)
             {
                 engineParticles.Play();
+                if (hasPlayedSound == false)
+                {
+                    motorSound.Play();
+                    hasPlayedSound = true;
+                }
             }
             else
             {
                 engineParticles.Stop();
+                if (hasPlayedSound == true)
+                {
+                    motorSound.Stop();
+                    hasPlayedSound = false;
+                }
             }
         }
         else
         {
             engineParticles.Stop();
+            if (hasPlayedSound == true)
+            {
+                motorSound.Stop();
+                hasPlayedSound = false;
+            }
         }
 
     }
