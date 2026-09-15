@@ -56,7 +56,7 @@ Material:
     - _specularDensity: 2000
     - _specularSpd: 1.08
     - _specularThickness: 2
-    - _waterDepth: 0.5
+    - _waterDepth: 0.08
     - _waveAmp: 0
     - _waveFreq: 0
     - _waveSpd: 0
