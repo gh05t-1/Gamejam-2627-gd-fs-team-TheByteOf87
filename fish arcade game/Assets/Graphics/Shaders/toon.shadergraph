@@ -248,20 +248,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "b36714a0a69b43a289b11dfd5cac6428"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "a890281c7ff94f9bb09f11bcf0915923"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "df74dfc8657c4c87a1c1af24237244b0"
                 },
                 "m_SlotId": 0
@@ -1393,7 +1379,7 @@
     "m_ObjectId": "6a6df1dab80946dfa283ed81c9e059b1",
     "m_Datas": [],
     "m_ActiveSubTarget": {
-        "m_Id": "6aee99abce3045718498293f59b07088"
+        "m_Id": "c4b661e1d8344819a68cb75d8328e1cd"
     },
     "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
@@ -1411,15 +1397,6 @@
     "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTerrainLitSubTarget",
-    "m_ObjectId": "6aee99abce3045718498293f59b07088",
-    "m_EnableInstancedPerPixelNormal": true,
-    "m_NormalDropOffSpace": 0,
-    "m_BlendModePreserveSpecular": true
 }
 
 {
@@ -2004,6 +1981,15 @@
         "w": 0.0
     },
     "m_LiteralMode": false
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTerrainLitSubTarget",
+    "m_ObjectId": "c4b661e1d8344819a68cb75d8328e1cd",
+    "m_EnableInstancedPerPixelNormal": true,
+    "m_NormalDropOffSpace": 0,
+    "m_BlendModePreserveSpecular": true
 }
 
 {

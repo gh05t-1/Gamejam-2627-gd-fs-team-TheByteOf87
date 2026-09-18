@@ -108,8 +108,8 @@ Material:
     - _Metallic1: 0
     - _Metallic2: 0
     - _Metallic3: 0
-    - _OutlineStrength: 1
-    - _OutlineThresh: 1
+    - _OutlineStrength: 0.14
+    - _OutlineThresh: 0.56
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness0: 1

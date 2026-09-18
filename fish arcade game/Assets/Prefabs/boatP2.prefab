@@ -5489,7 +5489,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1079
+    m_Bits: 5175
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 81440c6c29eef3647abfb4be4600658c, type: 2}
   m_TargetDisplay: 0
@@ -5555,9 +5555,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7614807850989003551}
   - component: {fileID: 2852461545428862217}
-  - component: {fileID: 2182473029916917157}
   - component: {fileID: 6366266591716217907}
   - component: {fileID: 8784986452525826744}
+  - component: {fileID: 8263393496292154933}
+  - component: {fileID: 4415881987034272351}
   m_Layer: 0
   m_Name: boatP2
   m_TagString: Untagged
@@ -5611,32 +5612,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 84
   m_CollisionDetection: 2
---- !u!136 &2182473029916917157
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7237158753178511466}
-  m_Material: {fileID: 13400000, guid: 2172c4de21715944eb2b721f55250dce, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.75
-  m_Height: 6.8
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.82, z: 0}
 --- !u!114 &6366266591716217907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5753,6 +5731,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8263393496292154933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237158753178511466}
+  m_Material: {fileID: 13400000, guid: 2172c4de21715944eb2b721f55250dce, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.953498, y: 1, z: 6.722229}
+  m_Center: {x: 0.008726418, y: 0, z: -0.21434212}
+--- !u!114 &4415881987034272351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237158753178511466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568b8e365710c044da502d0fb66315ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetY
 --- !u!1 &7304645615308362308
 GameObject:
   m_ObjectHideFlags: 0

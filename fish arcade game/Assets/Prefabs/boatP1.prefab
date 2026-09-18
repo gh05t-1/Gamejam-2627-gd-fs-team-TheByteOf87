@@ -5280,8 +5280,9 @@ GameObject:
   - component: {fileID: 1691971551624340649}
   - component: {fileID: 4010470964036199305}
   - component: {fileID: 2767712467933105243}
-  - component: {fileID: 3223989680437898941}
   - component: {fileID: 885044837826786944}
+  - component: {fileID: 2140135440674218200}
+  - component: {fileID: 2640956274053646633}
   m_Layer: 0
   m_Name: boatP1
   m_TagString: Untagged
@@ -5354,32 +5355,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 84
   m_CollisionDetection: 2
---- !u!136 &3223989680437898941
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4774856674501980291}
-  m_Material: {fileID: 13400000, guid: 2172c4de21715944eb2b721f55250dce, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.75
-  m_Height: 6.8
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.82, z: 0}
 --- !u!82 &885044837826786944
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5477,6 +5455,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2140135440674218200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774856674501980291}
+  m_Material: {fileID: 13400000, guid: 2172c4de21715944eb2b721f55250dce, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.953498, y: 1, z: 6.722229}
+  m_Center: {x: 0.008726418, y: 0, z: -0.21434212}
+--- !u!114 &2640956274053646633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774856674501980291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568b8e365710c044da502d0fb66315ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetY
 --- !u!1 &4809206691067077365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,7 +5798,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1079
+    m_Bits: 5175
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 81b6cf3d995b6e64c9b84915cb27ecb9, type: 2}
   m_TargetDisplay: 0
