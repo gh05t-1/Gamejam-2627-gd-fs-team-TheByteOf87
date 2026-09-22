@@ -1,13 +1,15 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Catch : MonoBehaviour
 {
-    public static UnityAction<bool> StartFishing;
+    public static UnityAction<int> StartFishing;
     [SerializeField] Slider fishingSlider;
     [SerializeField] Slider targetSlider;
     [SerializeField] RawImage targetImage;
@@ -15,24 +17,24 @@ public class Catch : MonoBehaviour
     [SerializeField] Vector2 targetSpeeds = new Vector2(20f, 50f); // The minimmum and maximum speed of the target
     [SerializeField] Vector2 targetSwitchTiming = new Vector2(0.1f, 1f);
     [SerializeField] int target;
-    [SerializeField] bool isPlayer1;
+    [SerializeField] int player;
     [SerializeField] float fishHealth = 3f;
+    [SerializeField] private Image FishIcon;
+    [SerializeField] private TextMeshProUGUI fishStats;
+    [SerializeField] PlayerInput playerInput;
     float[] catchSizes = {25, 20, 16, 12, 8};
     float moveSpeed;
     bool stopFishing = true;
-    [SerializeField] private Image FishIcon;
-    [SerializeField] private TextMeshProUGUI fishStats;
     public List<Fish> fishList = new List<Fish>();
     private Fish chosenFish;
 
     private void Awake()
     {
-        StartFishing += FishFish;
+        StartFishing += FishingFish;
     }
 
     private void Start()
     {
-        FishIcon.enabled = false;
         targetSlider.value = Random.Range(targetSlider.minValue + catchSizes[target] / 2, targetSlider.maxValue - catchSizes[target] / 2);
         
         targetImage.texture = targetImages[target];
@@ -60,10 +62,11 @@ public class Catch : MonoBehaviour
         targetSlider.value += moveSpeed * Time.deltaTime;
     }
 
-    private void FishFish(bool player)
+    private void FishingFish(int playerNumber)
     {
-        if (player != isPlayer1) return;
+        if (playerNumber != player) return;
 
+        playerInput.SwitchCurrentActionMap("Fishing");
         fishingSlider.gameObject.SetActive(true);
         targetSlider.gameObject.SetActive(true);
         fishHealth = 3f;
@@ -72,21 +75,13 @@ public class Catch : MonoBehaviour
 
     private void CatchFish()
     {
-        if (isPlayer1)
-        {
-            Inventory.collectFishActionP1.Invoke(GetRandomFish());
-            GameStates.ChangeStateP1();
-        }
-        else
-        {
-            Inventory.collectFishActionP2.Invoke(GetRandomFish());
-            GameStates.ChangeStateP2();
-        }
-
+        playerInput.SwitchCurrentActionMap("Boating");
+        GameStates.SwitchBoatState(player);
+        chosenFish = GetRandomFish();
 
         FishIcon.enabled = true;
         FishIcon.sprite = chosenFish.icon;
-        fishStats.text = "Fish; " + chosenFish.fishName + " Length: " + chosenFish.fishLenght + " Points " + chosenFish.points;
+        fishStats.text = "Fish; " + chosenFish.fishName + " Length: " + chosenFish.fishLength + " Points " + chosenFish.points;
 
         fishingSlider.gameObject.SetActive(false);
         targetSlider.gameObject.SetActive(false);
@@ -105,12 +100,6 @@ public class Catch : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(targetSwitchTiming.x, targetSwitchTiming.y));
         }
     }
-
-
-
-
-
-
 
     public Fish GetRandomFish()
     {

@@ -21,7 +21,8 @@ public class StartAndTimer : MonoBehaviour
     [SerializeField] private Transform boat2;
     [SerializeField] private AudioSource startSfx;
     [SerializeField] private AudioSource endSfx;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
     void Start()
     {
         startCanvas.SetActive(true);
@@ -32,17 +33,14 @@ public class StartAndTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRunning == false)
-        {
-            BoatP1Movement.toggleMovementP1(false);
-            BoatP2Movement.toggleMovementP2(false);
-            if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.X) && canStart)
-            {
-                StartGame();
-            }
-            
-        }
         sliderTimer.value = Mathf.Lerp(0,gameTime,1-Remap(remainingTime,0,210,0,1));
+
+        if (isRunning) return;
+
+        if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.X) && canStart)
+        {
+            StartGame();
+        }
     }
 
     public void StartGame()
@@ -50,15 +48,15 @@ public class StartAndTimer : MonoBehaviour
         endCanvas.SetActive(false);
         Invoke("EndGame", gameTime);
         isRunning = true;
-        BoatP1Movement.toggleMovementP1(true);
-        BoatP2Movement.toggleMovementP2(true);
+        BoatMovement.toggleMovement(true, 0);
+        BoatMovement.toggleMovement(true, 1);
         Invoke("DeductTime", 0);
         startCanvas.SetActive(false);
         canStart = false;
         boat1.position = boatStart1.position;
         boat1.rotation = boatStart1.rotation;
-        boat2.position = boatStart2.position;
-        boat2.rotation = boatStart2.rotation;
+        //boat2.position = boatStart2.position;
+        //boat2.rotation = boatStart2.rotation;
         startSfx.Play();
     }
 
@@ -74,8 +72,8 @@ public class StartAndTimer : MonoBehaviour
     public void EndGame()
     {
         isRunning = false;
-        BoatP1Movement.toggleMovementP1(false);
-        BoatP2Movement.toggleMovementP2(false);
+        BoatMovement.toggleMovement(false, 0);
+        BoatMovement.toggleMovement(false, 1);
         endCanvas.SetActive(true);
         scoreP1.text = this.GetComponent<Inventory>().scoreP1.ToString();
         scoreP2.text = this.GetComponent<Inventory>().scoreP2.ToString();

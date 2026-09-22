@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 7099547089646060327}
   - component: {fileID: 199528959787947915}
   m_Layer: 5
-  m_Name: Player 1 Fish Canvas
+  m_Name: Player Fish Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,9 +447,32 @@ MonoBehaviour:
   targetSpeeds: {x: 20, y: 50}
   targetSwitchTiming: {x: 0.1, y: 1}
   target: 0
-  isPlayer1: 1
+  player: 0
   fishHealth: 3
-  fishRandomizer: {fileID: 0}
+  FishIcon: {fileID: 0}
+  fishStats: {fileID: 0}
+  playerInput: {fileID: 0}
+  fishList:
+  - {fileID: 11400000, guid: b33b72a27d118004999cfd3556c23d4e, type: 2}
+  - {fileID: 11400000, guid: 164cc6a538348884bad439c93d0dac25, type: 2}
+  - {fileID: 11400000, guid: 61ea40a7ace0eac429ed7423e01f4872, type: 2}
+  - {fileID: 11400000, guid: 8d184b4dd2fc55b4286a9f8814716ad6, type: 2}
+  - {fileID: 11400000, guid: 09ecbc9f19d451f4bb5b667e235a1645, type: 2}
+  - {fileID: 11400000, guid: 73ed0fd9e2f336345853c4d54d133677, type: 2}
+  - {fileID: 11400000, guid: b0b9379afe73168409fec928f1701f6b, type: 2}
+  - {fileID: 11400000, guid: 7ca47296b8b7d6d4486e3c41932b5044, type: 2}
+  - {fileID: 11400000, guid: e417443984c5b7f42b2b384ad1d68d06, type: 2}
+  - {fileID: 11400000, guid: d20094f85dd856547927acf7be44320d, type: 2}
+  - {fileID: 11400000, guid: a9c0224d6d6bea240b7b6b88f2863fb9, type: 2}
+  - {fileID: 11400000, guid: 0afffb347252f6d4f81ecd3f5eb52dfc, type: 2}
+  - {fileID: 11400000, guid: 4ebffce4cadbf6148a01bb1b45beb459, type: 2}
+  - {fileID: 11400000, guid: 6c7d66620ba7c68459a1b83c41160fd2, type: 2}
+  - {fileID: 11400000, guid: b200af9455897a64eba23ddaddc1de0f, type: 2}
+  - {fileID: 11400000, guid: 0a7d03291917c6d408e0f5337999a2a8, type: 2}
+  - {fileID: 11400000, guid: e4b728355026b31478cf84536282c417, type: 2}
+  - {fileID: 11400000, guid: df257b10a26eb8f419b8cf00e3dc3499, type: 2}
+  - {fileID: 11400000, guid: dec05eaf2b615f142943e27c02869d97, type: 2}
+  - {fileID: 11400000, guid: bf45e90106e119c439fa1e5a655466ee, type: 2}
 --- !u!1 &8431458372863664395
 GameObject:
   m_ObjectHideFlags: 0
